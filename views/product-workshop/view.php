@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /** @var app\models\ProductWorkshop $model */
 
 $this->title = $model->id_product_workshop;
-$this->params['breadcrumbs'][] = ['label' => 'Product Workshops', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Продукция цеха', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id_product_workshop' => $model->id_product_workshop], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id_product_workshop' => $model->id_product_workshop], [
+        <?= Html::a('Обновить', ['update', 'id_product_workshop' => $model->id_product_workshop], ['class' => 'btn btn-primary', 'style' => 'background: #355CBD']) ?>
+        <?= Html::a('Удалить', ['delete', 'id_product_workshop' => $model->id_product_workshop], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',

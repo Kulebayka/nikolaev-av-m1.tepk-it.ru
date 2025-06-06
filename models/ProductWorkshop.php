@@ -33,7 +33,7 @@ class ProductWorkshop extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['product_id', 'workshop_id', 'time_craft'], 'required'],
+            [['product_id', 'workshop_id', 'time_craft'], 'required', 'message' => 'Поле не заполнено'],
             [['product_id', 'workshop_id'], 'integer'],
             [['time_craft'], 'number'],
             [['product_id'], 'exist', 'skipOnError' => true, 'targetClass' => Product::class, 'targetAttribute' => ['product_id' => 'id_product']],
@@ -48,9 +48,9 @@ class ProductWorkshop extends \yii\db\ActiveRecord
     {
         return [
             'id_product_workshop' => 'Id Product Workshop',
-            'product_id' => 'Product ID',
-            'workshop_id' => 'Workshop ID',
-            'time_craft' => 'Time Craft',
+            'product_id' => 'Продукт',
+            'workshop_id' => 'Цех',
+            'time_craft' => 'Время производства',
         ];
     }
 

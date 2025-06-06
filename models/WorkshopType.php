@@ -42,7 +42,7 @@ class WorkshopType extends \yii\db\ActiveRecord
     {
         return [
             'id_workshop_type' => 'Id Workshop Type',
-            'name' => 'Name',
+            'name' => 'Название цеха',
         ];
     }
 

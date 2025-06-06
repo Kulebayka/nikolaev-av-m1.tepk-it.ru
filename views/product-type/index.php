@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\ProductTypeSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Product Types';
+$this->title = 'Тип продукции';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-type-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Product Type', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить тип продукции', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_product_type',
+            //'id_product_type',
             'name',
             'koeficent_type_product',
             [

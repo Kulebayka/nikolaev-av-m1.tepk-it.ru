@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\ProductWorkshop $model */
 
-$this->title = 'Update Product Workshop: ' . $model->id_product_workshop;
-$this->params['breadcrumbs'][] = ['label' => 'Product Workshops', 'url' => ['index']];
+$this->title = 'Обновить продукцию цеха: ' . $model->id_product_workshop;
+$this->params['breadcrumbs'][] = ['label' => 'Продукция цеха', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id_product_workshop, 'url' => ['view', 'id_product_workshop' => $model->id_product_workshop]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="product-workshop-update">
 

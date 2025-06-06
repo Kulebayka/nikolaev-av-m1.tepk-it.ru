@@ -44,8 +44,8 @@ class ProductType extends \yii\db\ActiveRecord
     {
         return [
             'id_product_type' => 'Id Product Type',
-            'name' => 'Name',
-            'koeficent_type_product' => 'Koeficent Type Product',
+            'name' => 'Название продукции',
+            'koeficent_type_product' => 'Коэффициент продукциии',
         ];
     }
 

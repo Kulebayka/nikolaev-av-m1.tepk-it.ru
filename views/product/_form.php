@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 <div class="product-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+    <!--Снизу представлена реализация выпадающего списка, который берёт данные из талицы Тип продукции -->
     <?= $form->field($model, 'product_type_id')->dropDownList(yii\helpers\ArrayHelper::map(app\models\ProductType::find()->all(), 'id_product_type', 'name'),
     ['prompt' => 'Выбирите тип продукции']) ?>
 
@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'article')->textInput() ?>
 
     <?= $form->field($model, 'min_price_partner')->textInput(['maxlength' => true]) ?>
-
+    <!--Снизу представлена реализация выпадающего списка, который берёт данные из талицы Тип Материала -->
     <?= $form->field($model, 'material_type_id')->dropDownList(yii\helpers\ArrayHelper::map(app\models\MaterialType::find()->all(), 'id_material_type', 'name'),
         ['prompt' => 'Выбирите тип продукции']) ?>
 

@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="product-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+    <!--Снизу меняем название кнопки и меняем ей цвет через background-->
     <p>
         <?= Html::a('Добавить продукцию', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD']) ?>
     </p>
@@ -30,6 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             //'id_product',
+            // снизу показана реализация замены id на данные из таблицы Тип продукции
             [
                 'attribute' => 'product_type_id',
                 'value' => function($model) {
@@ -41,6 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'article',
             'min_price_partner',
+            // снизу показана реализация замены id на данные из таблицы Тип материала
             [
                 'attribute' => 'material_type_id',
                 'value' => function($model) {

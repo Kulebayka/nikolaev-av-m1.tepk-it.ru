@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\MaterialTypeSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Material Types';
+$this->title = 'Тип материала';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="material-type-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Material Type', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавление типа материала', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_material_type',
+            //'id_material_type',
             'name',
             'percent_loss_material',
             [

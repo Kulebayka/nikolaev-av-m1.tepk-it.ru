@@ -44,8 +44,8 @@ class MaterialType extends \yii\db\ActiveRecord
     {
         return [
             'id_material_type' => 'Id Material Type',
-            'name' => 'Name',
-            'percent_loss_material' => 'Percent Loss Material',
+            'name' => 'Название материала',
+            'percent_loss_material' => 'процент потери материала',
         ];
     }
 

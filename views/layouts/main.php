@@ -17,14 +17,23 @@ $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
-$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/KomfortIco.ico')]);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/KomfortIco.ico')]);//Меняем иконку в вкладке
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
+    <!-- Смена шрифта в проекте -->
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <style>
+        body, h1, h2, h3, h4, h5, h6, input, textarea, button {
+            font-family: 'Candara', sans-serif!important;
+            background-color: #FFFFFF;
+
+        }
+        .navbar { color: }
+    </style>
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
@@ -41,7 +50,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         'items' => [
                 // Меняем кнопки в шапке сайта на нужные(Продукция и Список цехов)
             ['label' => 'Продукция', 'url' => ['/product/index']],
-            ['label' => 'Список цехов', 'url' => ['/workshop/index']],
+            ['label' => 'Цеха', 'url' => ['/workshop/index']],
+            ['label' => 'Список материалов', 'url' => ['/material-type/index']],
+            ['label' => 'Список продукции', 'url' => ['/product-type/index']],
+            ['label' => 'Список цехов', 'url' => ['/workshop-type/index']],
+            ['label' => 'Продукция цеха', 'url' => ['/product-workshop/index']],
             Yii::$app->user->isGuest
                 ? ['label' => '', 'url' => ['/site/login']]
                 : '<li class="nav-item">'

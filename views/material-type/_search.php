@@ -22,8 +22,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'percent_loss_material') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>
+        <?= Html::submitButton('Search', ['class' => 'btn btn-primary', 'style' => 'background: #355CBD']) ?>
+        <?= Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary', 'style' => 'background: #355CBD']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

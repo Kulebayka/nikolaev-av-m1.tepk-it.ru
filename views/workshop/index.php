@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //'id_workshop',
             'name',
+            // снизу показана реализация замены id на данные из таблицы Тип цеха
             [
                 'attribute' => 'workshop_type_id',
                 'value' => function($model) {

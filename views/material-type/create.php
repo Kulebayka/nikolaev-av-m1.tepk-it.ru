@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\MaterialType $model */
 
-$this->title = 'Create Material Type';
-$this->params['breadcrumbs'][] = ['label' => 'Material Types', 'url' => ['index']];
+$this->title = 'Добавление типа материала';
+$this->params['breadcrumbs'][] = ['label' => 'Тип материала', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="material-type-create">

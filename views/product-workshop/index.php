@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\ProductWorkshopSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Product Workshops';
+$this->title = 'Продукция цеха';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-workshop-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Product Workshop', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить продукцию цеха', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,9 +29,23 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_product_workshop',
-            'product_id',
-            'workshop_id',
+            //'id_product_workshop',
+            [
+                'attribute' => 'product_id',
+                'value' => function($model) {
+                    return $model->product ? $model->product->name : '(не задано)';
+                },
+                'label' => 'Продукция',
+                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Product::find()->all(), 'id_product', 'name'),
+            ],
+            [
+                'attribute' => 'workshop_id',
+                'value' => function($model) {
+                    return $model->workshop ? $model->workshop->name : '(не задано)';
+                },
+                'label' => 'Цех',
+                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Workshop::find()->all(), 'id_workshop', 'name'),
+            ],
             'time_craft',
             [
                 'class' => ActionColumn::className(),

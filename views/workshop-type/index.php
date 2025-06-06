@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\WorkshopTypeSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Workshop Types';
+$this->title = 'Тип цеха';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="workshop-type-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Workshop Type', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавление типа цеха', ['create'], ['class' => 'btn btn-success', 'style' => 'background: #355CBD']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_workshop_type',
+            //'id_workshop_type',
             'name',
             [
                 'class' => ActionColumn::className(),

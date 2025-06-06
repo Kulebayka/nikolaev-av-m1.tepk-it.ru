@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
+    <!--Снизу представлена реализация выпадающего списка, который берёт данные из талицы Тип цеха -->
     <?= $form->field($model, 'workshop_type_id')->dropDownList(yii\helpers\ArrayHelper::map(app\models\WorkshopType::find()->all(), 'id_workshop_type', 'name'),
         ['prompt' => 'Выбирите тип цеха']) ?>
 
